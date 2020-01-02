@@ -32,7 +32,7 @@ DWORD WINAPI DLLStart(LPVOID param)
 	BYTE* leftRoosterPaddleData = game->roosterLeftPaddle->data;
 	BYTE* rightRoosterPaddleData = game->roosterRightPaddle->data;
 
-	DWORD iterateTo = 458 - game->chickenLeftPaddle->hitBox->first;
+	DWORD iterateTo = 478 - game->chickenLeftPaddle->hitBox->first;
 
 	//Find hwnd of NosTale window
 	HWND hwnd = FindWindowA("TNosTaleMainF", "NosTale");
@@ -43,7 +43,7 @@ DWORD WINAPI DLLStart(LPVOID param)
 		if (game->m_bIsVisible)
 		{
 			game->m_bHasMaxAmmo = true;
-			for (DWORD i = 458; i != iterateTo; i--)
+			for (DWORD i = 478; i != iterateTo; i--)
 			{
 				if (leftRoosterPaddleData[i] > 0)
 				{
